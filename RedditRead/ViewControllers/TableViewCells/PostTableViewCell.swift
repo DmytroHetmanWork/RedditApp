@@ -65,6 +65,7 @@ class PostTableViewCell: UITableViewCell {
                                          : Constants.bookmarkEmptyImage, for: .normal)
             
             self.titleLabel.text = post.title
+            self.titleLabel.font = UIFont(name: Defaults.fontType, size: CGFloat(Defaults.fontSize))
             self.titleLabel.sizeToFit()
             
             self.ratingButton.setImage(post.isUpvoted ? Constants.ratingButtonPositive :

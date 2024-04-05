@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h6o-7W-yys">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h6o-7W-yys">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,20 +12,20 @@
         <!--Post Details View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PostDetailsViewController" customModule="HT_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PostDetailsViewController" customModule="RedditRead" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="s3y-k8-qeJ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZU-QQ-TrV" customClass="PostView" customModule="HT_2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="381"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZU-QQ-TrV" customClass="PostView" customModule="RedditRead" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="379"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2KT-C3-Tfi" userLabel="CommentsContainerView">
-                                        <rect key="frame" x="0.0" y="393" width="414" height="381"/>
+                                        <rect key="frame" x="0.0" y="391" width="414" height="379"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="997" constant="250" id="qHl-kj-EiU"/>
                                         </constraints>
@@ -69,20 +70,20 @@
         <!--Post List Table View Controller-->
         <scene sceneID="OWF-RW-zKA">
             <objects>
-                <tableViewController id="fbr-6a-4kA" customClass="PostListTableViewController" customModule="HT_2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="fbr-6a-4kA" customClass="PostListTableViewController" customModule="RedditRead" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="400" estimatedRowHeight="400" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="a1L-lC-RZb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="postCell" id="dSv-8X-RdO" userLabel="PostCell" customClass="PostTableViewCell" customModule="HT_2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="400"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="postCell" id="dSv-8X-RdO" userLabel="PostCell" customClass="PostTableViewCell" customModule="RedditRead" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="414" height="400"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dSv-8X-RdO" id="B7i-yn-N2V">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezk-VC-NK5" customClass="PostView" customModule="HT_2" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezk-VC-NK5" customClass="PostView" customModule="RedditRead" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="8" width="414" height="392"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
@@ -105,6 +106,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="cos-uW-SeC">
+                        <barButtonItem key="leftBarButtonItem" title="Settings Button" image="gearshape.fill" catalog="system" id="aoU-IF-8y7">
+                            <connections>
+                                <action selector="settingsButton:" destination="fbr-6a-4kA" id="H4p-qt-iqk"/>
+                                <segue destination="Hd8-lg-Iha" kind="show" id="CdD-vl-iJh"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="bookmark.circle" catalog="system" id="Dif-FX-18X">
                             <connections>
                                 <action selector="filterButtonTapped:" destination="fbr-6a-4kA" id="tZy-k9-8U2"/>
@@ -113,6 +120,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="filterButton" destination="Dif-FX-18X" id="bA7-eo-1gv"/>
+                        <outlet property="settingsButton" destination="aoU-IF-8y7" id="Uit-Af-KyE"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="postSegue" id="3FA-9a-yJZ"/>
                     </connections>
                 </tableViewController>
@@ -126,7 +134,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h6o-7W-yys" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dYI-zf-Ite">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -138,9 +146,26 @@
             </objects>
             <point key="canvasLocation" x="911.59420289855075" y="64.955357142857139"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="KI4-Ct-q7a">
+            <objects>
+                <viewController id="Hd8-lg-Iha" customClass="SettingsViewController" customModule="RedditRead" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FQC-bV-ILi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="p8v-r5-7Ni"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ueE-VD-Caa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lt6-Uo-tFQ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2854" y="798"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="bookmark.circle" catalog="system" width="128" height="121"/>
+        <image name="bookmark.circle" catalog="system" width="128" height="123"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

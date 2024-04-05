@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		19446BF62E527982C9B0CF0F /* Pods_RedditRead.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8402FFA6F3DF080CCD58D5C /* Pods_RedditRead.framework */; };
+		61BA478C2BC0047400951740 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BA478B2BC0047400951740 /* SettingsViewController.swift */; };
 		936A93D22BADB27B00306EEA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936A93D12BADB27B00306EEA /* LoginViewController.swift */; };
 		936A93D42BADB73500306EEA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936A93D32BADB73500306EEA /* SignUpViewController.swift */; };
 		936A93D72BADBA3600306EEA /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936A93D62BADBA3600306EEA /* AuthModel.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61BA478B2BC0047400951740 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		936A93D12BADB27B00306EEA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		936A93D32BADB73500306EEA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		936A93D62BADBA3600306EEA /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61BA478A2BC0045600951740 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				61BA478B2BC0047400951740 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		8F165501866C7FC6707DCD42 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +215,7 @@
 		BFAC85692824313200A0E507 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				61BA478A2BC0045600951740 /* Settings */,
 				936A93D02BADB26100306EEA /* Authorization */,
 				BFAC856A2824316100A0E507 /* TableViewCells */,
 				BF14D1E127B7AF8200C8C97C /* PostDetailsViewController.swift */,
@@ -377,6 +388,7 @@
 				BF0D90792822C4CE004A8D53 /* Comment.swift in Sources */,
 				BF0D907D2822C4CE004A8D53 /* MoreCommentsListData.swift in Sources */,
 				BF14D1E027B7AF8200C8C97C /* SceneDelegate.swift in Sources */,
+				61BA478C2BC0047400951740 /* SettingsViewController.swift in Sources */,
 				BF0D90782822C4CE004A8D53 /* CommentsList.swift in Sources */,
 				BFF0A07F27DA0D04006A30B7 /* PostCellDelegate.swift in Sources */,
 				BF0D90802822C4CE004A8D53 /* CommentsVM.swift in Sources */,
