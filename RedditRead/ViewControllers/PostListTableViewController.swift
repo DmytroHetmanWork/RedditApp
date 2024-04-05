@@ -44,6 +44,8 @@ class PostListTableViewController: UITableViewController {
     
     @IBOutlet private weak var filterButton: UIBarButtonItem!
     
+    @IBOutlet private weak var settingsButton: UIBarButtonItem!
+    
     // MARK: - Lifecycle.
     
     override func viewDidLoad() {
@@ -93,6 +95,11 @@ class PostListTableViewController: UITableViewController {
             Constants.filterButtonActive : Constants.filterButtonInactive
     }
     
+    @IBAction func settingsButton(_ sender: UIBarButtonItem) {
+        let settingsViewController = SettingsViewController()
+        self.present(settingsViewController, animated: true)
+    }
+    
     // MARK: - Table view data source.
 
     override func numberOfSections(in tableView: UITableView) -> Int { 1 }
@@ -118,10 +125,8 @@ class PostListTableViewController: UITableViewController {
             limit: portionNumber,
             after: self.after) { [weak self] in
                 self?.loadingData = false
-                if countBeforeLoading != self?.posts.count {
-                    DispatchQueue.main.async {
-                        self?.tableView.reloadData()
-                    }
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
                 }
             }
     }
