@@ -61,4 +61,24 @@ struct CommentModel: Codable, Identifiable {
         self.depth = depth
         self.replies = commentData.replies.compactMap { CommentModel(from: $0) }
     }
+    
+    init?(body: String) {
+        timeCreated = Date().timeIntervalSince1970
+        self.body = body
+        rating = 0
+        depth = 0
+        replies = []
+        
+        if let userEmail = Defaults.userEmail {
+            username = userEmail
+        } else {
+            return nil
+        }
+        
+        if let url = URL(string: "https://www.reddit.com") {
+            permalink = url
+        } else {
+            return nil
+        }
+    }
 }

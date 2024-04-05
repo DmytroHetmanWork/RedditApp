@@ -7,5 +7,5 @@ target 'RedditRead' do
 
   # Pods for RedditRead
   pod 'SDWebImage', '~> 5.12'
-
+  pod 'RealmSwift', '~> 10.41'
 end

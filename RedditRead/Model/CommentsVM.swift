@@ -10,6 +10,8 @@ import Combine
 
 class CommentsVM: ObservableObject {
     @Published var comments = [CommentModel]()
+    @Published var newComment = ""
+
     private var more = [String]()
     
     private(set) var loadingMore = false
@@ -88,7 +90,7 @@ class CommentsVM: ObservableObject {
                 moreComments.append(commentModel)
             }
         }
-        DispatchQueue.main.async {   
+        DispatchQueue.main.async {
             self.comments.append(contentsOf: moreComments)
         }
     }
@@ -103,6 +105,15 @@ class CommentsVM: ObservableObject {
                 self?.more = more
             }
         }
+    }
+
+    func postComment() {
+       if newComment.isEmpty {
+           return
+        }
+        guard let commentModel = CommentModel(body: newComment) else { return }
+        comments.insert(commentModel, at: 0)
+        newComment = ""
     }
 }
 

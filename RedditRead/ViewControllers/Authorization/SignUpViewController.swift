@@ -47,11 +47,20 @@ class SignUpViewController: UIViewController {
     let signUpButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor(red: 1.0, green: 69.0 / 255.0, blue: 0.0, alpha: 1.0)
+        button.layer.cornerRadius = 8
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 2)
+        button.layer.shadowOpacity = 0.5
+        button.layer.shadowRadius = 2
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         return button
     }()
-    
+
+
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -71,7 +80,7 @@ class SignUpViewController: UIViewController {
         view.addSubview(signUpButton)
         
         NSLayoutConstraint.activate([
-            firstNameTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            firstNameTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             firstNameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             firstNameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             firstNameTextField.heightAnchor.constraint(equalToConstant: 40),
